@@ -1,8 +1,10 @@
 # Adaptive Agent
 
+[![GitHub](https://img.shields.io/github/stars/truenorth-lj/adaptive-agent-skill?style=social)](https://github.com/truenorth-lj/adaptive-agent-skill)
 [![skills.sh](https://img.shields.io/badge/skills.sh-install-blue)](https://skills.sh/truenorth-lj/adaptive-agent-skill)
 [![ClawHub: skill-review](https://img.shields.io/badge/ClawHub-skill--review-purple)](https://clawhub.ai/skills/adaptive-agent-skill-review)
 [![ClawHub: build-user-profile](https://img.shields.io/badge/ClawHub-build--user--profile-purple)](https://clawhub.ai/skills/adaptive-agent-build-user-profile)
+[![Anthropic Plugin](https://img.shields.io/badge/Anthropic_Plugin-pending_review-orange)](https://github.com/truenorth-lj/adaptive-agent-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Make your AI coding agent get stronger with use — skill self-improvement, memory-skill feedback loops, and automatic user profiling.
