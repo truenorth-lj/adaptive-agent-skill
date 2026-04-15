@@ -1,0 +1,10 @@
+{
+  "name": "Adaptive Agent",
+  "slug": "adaptive-agent",
+  "version": "v1",
+  "platforms": ["claude-code", "codex", "gemini-cli", "openclaw"],
+  "entry_point": "CLAUDE.md",
+  "description": "Make your AI agent get stronger with use — skill self-improvement, memory-skill feedback loops, and user profiling. Inspired by Hermes Agent's memory architecture.",
+  "triggers": ["adaptive", "skill review", "user profile", "memory", "self-improvement"],
+  "skills": ["skill-review", "build-user-profile"]
+}
