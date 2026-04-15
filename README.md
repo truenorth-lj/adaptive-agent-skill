@@ -1,12 +1,48 @@
 # Adaptive Agent
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-install-blue)](https://skills.sh/truenorth-lj/adaptive-agent-skill)
-[![ClawHub](https://img.shields.io/badge/ClawHub-install-purple)](https://clawhub.ai)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![ClawHub: skill-review](https://img.shields.io/badge/ClawHub-skill--review-purple)](https://clawhub.ai/skills/adaptive-agent-skill-review)
+[![ClawHub: build-user-profile](https://img.shields.io/badge/ClawHub-build--user--profile-purple)](https://clawhub.ai/skills/adaptive-agent-build-user-profile)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Make your AI coding agent get stronger with use — skill self-improvement, memory-skill feedback loops, and automatic user profiling.
 
 Inspired by [Hermes Agent](https://github.com/NousResearch/hermes-agent)'s four-layer memory architecture, adapted for Claude Code and other AI coding agents through prompt engineering.
+
+## Install
+
+```bash
+# skills.sh (Claude Code, Codex, Gemini CLI, Copilot, 45 agents)
+npx skills add truenorth-lj/adaptive-agent-skill
+
+# ClawHub
+clawhub install adaptive-agent-skill-review
+clawhub install adaptive-agent-build-user-profile
+
+# Manual (any agent)
+git clone https://github.com/truenorth-lj/adaptive-agent-skill.git
+cp -r adaptive-agent-skill/skills/skill-review ~/.claude/skills/
+cp -r adaptive-agent-skill/skills/build-user-profile ~/.claude/skills/
+```
+
+## Directory Structure
+
+```
+adaptive-agent-skill/
+├── CLAUDE.md                          # Always-on behavioral rules (paste into your project)
+├── .claude-plugin/
+│   └── plugin.json                    # Claude Code plugin manifest
+├── skills/
+│   ├── skill-review/
+│   │   └── SKILL.md                   # Periodic skill audit and improvement
+│   └── build-user-profile/
+│       └── SKILL.md                   # Build user profile from workspace context
+├── templates/
+│   └── user_profile.md                # Memory template for user profile
+├── meta.json                          # Skill metadata
+├── LICENSE
+└── README.md
+```
 
 ## The Idea
 
@@ -17,17 +53,6 @@ AI agents treat skills and memory as separate systems. They shouldn't.
 - They should feed each other in a loop
 
 When a skill fails, the lesson should flow back into the skill AND into memory. When memory contains a relevant gotcha, it should be applied proactively before the skill hits the same wall.
-
-This skill set implements that feedback loop.
-
-## What's Included
-
-| Component | Purpose |
-|-----------|---------|
-| `CLAUDE.md` | Always-on behavioral rules — paste into your project's CLAUDE.md |
-| `skills/skill-review/` | Periodic review of all skills for staleness, missing gotchas, improvements |
-| `skills/build-user-profile/` | Build user profile from workspace context so agent knows who you are |
-| `templates/user_profile.md` | Memory template for the user profile |
 
 ### Three-Layer Architecture
 
@@ -47,32 +72,6 @@ This skill set implements that feedback loop.
 │  (agent's memory system, auto-loaded)           │
 └────────────────────────────────────────────────┘
 ```
-
-## Install
-
-### skills.sh (cross-agent: Claude Code, Codex, Gemini CLI, Copilot)
-
-```bash
-# Install both skills
-npx skills add truenorth-lj/adaptive-agent-skill --yes --global
-```
-
-### ClawHub
-
-```bash
-clawhub install adaptive-agent-skill-review
-clawhub install adaptive-agent-build-user-profile
-```
-
-### Manual (any agent)
-
-```bash
-git clone https://github.com/truenorth-lj/adaptive-agent-skill.git
-cp -r adaptive-agent-skill/skills/skill-review ~/.claude/skills/
-cp -r adaptive-agent-skill/skills/build-user-profile ~/.claude/skills/
-```
-
-Then paste the contents of `CLAUDE.md` into your project's CLAUDE.md (or AGENTS.md).
 
 ## Setup
 
@@ -147,8 +146,6 @@ This project is based on a [source-code analysis](https://zengineer.blog/blog/de
 We can't replicate L1 and L3 (they require infrastructure changes), but L2 and L4 are achievable through prompt engineering alone. The key insight: **Opus 4.6's instruction-following ability compensates** — a smart agent that follows behavioral rules reliably is equivalent to a less-smart agent with built-in memory infrastructure.
 
 ## Constraints
-
-What this approach **cannot** do:
 
 | Limitation | Why | Workaround |
 |-----------|-----|------------|

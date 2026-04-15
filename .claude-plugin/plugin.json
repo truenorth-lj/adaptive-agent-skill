@@ -1,0 +1,10 @@
+{
+  "name": "adaptive-agent",
+  "description": "Make your AI agent get stronger with use — skill self-improvement, memory-skill feedback loops, and user profiling. Inspired by Hermes Agent's four-layer memory architecture.",
+  "author": {
+    "name": "LJ Li",
+    "url": "https://zengineer.blog"
+  },
+  "homepage": "https://github.com/truenorth-lj/adaptive-agent-skill",
+  "keywords": ["memory", "skills", "self-improvement", "user-profile", "adaptive", "hermes-agent"]
+}
