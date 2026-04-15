@@ -1,5 +1,9 @@
 # Adaptive Agent
 
+[![skills.sh](https://img.shields.io/badge/skills.sh-install-blue)](https://skills.sh/truenorth-lj/adaptive-agent-skill)
+[![ClawHub](https://img.shields.io/badge/ClawHub-install-purple)](https://clawhub.ai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Make your AI coding agent get stronger with use — skill self-improvement, memory-skill feedback loops, and automatic user profiling.
 
 Inspired by [Hermes Agent](https://github.com/NousResearch/hermes-agent)'s four-layer memory architecture, adapted for Claude Code and other AI coding agents through prompt engineering.
